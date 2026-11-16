@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>کار در منزل | فرصت همکاری بسته‌بندی</title>
+  <meta name="description" content="اطلاع‌رسانی درباره فرصت‌های همکاری و بسته‌بندی در منزل">
+  <style>
+    :root {
+      --navy: #102b4e;
+      --navy-2: #173d68;
+      --ink: #172536;
+      --muted: #64748b;
+      --paper: #f5f8fc;
+      --white: #fff;
+      --line: #e5ebf2;
+      --soft: #edf3f9;
+      --accent: #d9e6f3;
+      --shadow: 0 18px 55px rgba(16, 43, 78, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.9;
+    }
+    a { color: inherit; }
+    .container { width: min(1120px, calc(100% - 40px)); margin: auto; }
+    header {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      min-height: 76px; display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+    }
+    .brand { color: var(--navy); font-size: 21px; font-weight: 800; text-decoration: none; }
+    nav { display: flex; gap: 26px; flex-wrap: wrap; }
+    nav a { color: #526174; text-decoration: none; font-size: 14px; transition: color .2s; }
+    nav a:hover { color: var(--navy-2); }
+    .hero { padding: 54px 0 34px; }
+    .hero-wrap {
+      display: grid; grid-template-columns: 1fr 1.05fr; align-items: center;
+      gap: 42px; background: var(--white); border: 1px solid var(--line);
+      border-radius: 26px; padding: 22px; box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero-copy { padding: 22px 26px 22px 8px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--navy-2); background: var(--soft);
+      padding: 6px 13px; border-radius: 99px; font-size: 12px; font-weight: bold;
+    }
+    .eyebrow:before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #648bb5; }
+    h1 { color: var(--navy); font-size: clamp(30px, 4vw, 47px); line-height: 1.55; margin: 18px 0 12px; }
+    .hero-copy p { color: var(--muted); font-size: 16px; margin: 0 0 24px; }
+    .hero-image { width: 100%; height: 420px; object-fit: cover; border-radius: 19px; display: block; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center;
+      background: var(--navy); color: white; text-decoration: none;
+      padding: 12px 23px; border-radius: 10px; font-weight: bold;
+      font-size: 14px; transition: .2s; border: 1px solid var(--navy);
+    }
+    .btn:hover { background: var(--navy-2); transform: translateY(-1px); }
+    .btn.secondary { background: white; color: var(--navy); }
+    .btn.secondary:hover { background: var(--soft); }
+    section.content {
+      margin: 26px auto; padding: 34px; background: white;
+      border: 1px solid var(--line); border-radius: 20px;
+    }
+    .section-head { margin-bottom: 22px; }
+    h2 { color: var(--navy); font-size: 24px; margin: 0 0 8px; }
+    .section-head p, .body-copy { color: var(--muted); margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .item {
+      background: #fbfcfe; border: 1px solid var(--line);
+      padding: 22px; border-radius: 15px;
+    }
+    .item .num {
+      display: inline-grid; place-items: center; width: 34px; height: 34px;
+      border-radius: 10px; color: var(--navy); background: var(--soft);
+      font-size: 13px; font-weight: bold; margin-bottom: 10px;
+    }
+    .item h3 { color: var(--navy); font-size: 17px; margin: 0 0 6px; }
+    .item p { color: var(--muted); font-size: 14px; margin: 0; }
+    .job-panel {
+      background: var(--navy); color: white; border-radius: 18px;
+      padding: 30px; display: flex; justify-content: space-between;
+      align-items: center; gap: 24px;
+    }
+    .job-panel h2 { color: white; }
+    .job-panel p { color: #d5e0ec; margin: 8px 0 0; }
+    .job-panel .btn { background: white; color: var(--navy); border-color: white; flex-shrink: 0; }
+    .contact { text-align: center; background: var(--soft) !important; }
+    .contact .btn { margin: 8px 5px; }
+    .contact .meta { color: var(--muted); font-size: 13px; margin-top: 15px; }
+    .trust-mark { text-align: center; }
+    .trust-mark img { display: block; width: min(340px, 100%); height: auto; margin: 18px auto 10px; border-radius: 12px; }
+    .trust-mark .disclaimer { color: var(--muted); font-size: 12px; margin: 8px auto 0; max-width: 680px; }
+    footer { color: #d7e1ed; background: #0b203a; padding: 26px 20px; text-align: center; font-size: 13px; }
+    footer p { margin: 3px 0; }
+    @media (max-width: 760px) {
+      .nav { padding: 13px 0; align-items: flex-start; flex-direction: column; gap: 8px; }
+      nav { gap: 16px; }
+      .hero { padding-top: 24px; }
+      .hero-wrap { grid-template-columns: 1fr; gap: 18px; padding: 12px; }
+      .hero-copy { padding: 14px 12px 6px; }
+      .hero-image { height: 280px; grid-row: 1; }
+      .grid { grid-template-columns: 1fr; }
+      section.content { padding: 24px 18px; }
+      .job-panel { align-items: flex-start; flex-direction: column; padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">کار در منزل</a>
+      <nav aria-label="منوی اصلی">
+        <a href="#about">درباره ما</a>
+        <a href="#jobs">فرصت همکاری</a>
+        <a href="#contact">ارتباط با ما</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container hero">
+      <div class="hero-wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">فرصت همکاری در بسته‌بندی</span>
+          <h1>به دنبال درآمد در منزل هستید؟</h1>
+          <p>با فرصت‌های همکاری و بسته‌بندی در منزل آشنا شوید. شرایط هر فرصت را پیش از شروع، شفاف و مستقیم بررسی کنید.</p>
+          <a class="btn" href="#jobs">مشاهده شرایط همکاری</a>
+        </div>
+        <img class="hero-image" src="packing-woman.png" alt="خانمی در حال بسته‌بندی سفارش‌ها در محیط کاری مرتب">
+      </div>
+    </div>
+
+    <section class="container content" id="about">
+      <div class="section-head">
+        <h2>ویژگی‌ها و مزایای کار در منزل</h2>
+        <p>با توجه به نوع فعالیت، امکان انتخاب شیوه همکاری متناسب با شرایط خود را بررسی کنید.</p>
+      </div>
+      <div class="grid">
+        <article class="item">
+          <span class="num">۰۱</span>
+          <h3>شروع با سرمایه کم</h3>
+          <p>بعضی از فعالیت‌های خانگی را می‌توان با امکانات محدود آغاز کرد.</p>
+        </article>
+        <article class="item">
+          <span class="num">۰۲</span>
+          <h3>انعطاف‌پذیری زمانی</h3>
+          <p>در برخی مشاغل امکان هماهنگی ساعات کار با برنامه روزانه وجود دارد.</p>
+        </article>
+        <article class="item">
+          <span class="num">۰۳</span>
+          <h3>صرفه‌جویی در زمان</h3>
+          <p>کار در خانه می‌تواند زمان و هزینه رفت‌وآمد را کاهش دهد.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content" id="jobs">
+      <div class="job-panel">
+        <div>
+          <h2>فرصت همکاری در بسته‌بندی منزل</h2>
+          <p>برای اطلاع از موجود بودن فرصت همکاری، نوع بسته‌بندی، شرایط تحویل کالا، دستمزد و نحوه تسویه با مدیریت ارتباط بگیرید.</p>
+          <p>توجه: شرایط و دستمزد هر فرصت باید پیش از شروع همکاری به‌صورت شفاف از مدیریت استعلام شود.</p>
+        </div>
+        <a class="btn" href="https://rubika.ir/modirir" target="_blank" rel="noopener noreferrer">ارتباط با مدیریت</a>
+      </div>
+    </section>
+
+    <section class="container content contact" id="contact">
+      <h2>کانال اطلاع‌رسانی کار در منزل</h2>
+      <p class="body-copy">برای اطلاع از اخبار و فرصت‌های همکاری به کانال ما بپیوندید.</p>
+      <a class="btn" href="https://rubika.ir/kardarmanzel_98" target="_blank" rel="noopener noreferrer">ورود به کانال روبیکا</a>
+      <div class="meta">آیدی مدیریت: @modirir &nbsp; | &nbsp; آیدی کانال: @kardarmanzel_98</div>
+    </section>
+
+    <section class="container content trust-mark" aria-label="نماد اعتماد الکترونیکی">
+      <h2>نماد اعتماد الکترونیکی</h2>
+      <img src="enamad.png" alt="تصویر نماد اعتماد الکترونیکی ارسالی">
+    </section>
+  </main>
+
+  <footer>
+    <p>کار در منزل | فرصت همکاری بسته‌بندی</p>
+    <p>برای اطلاع از شرایط همکاری با مدیریت تماس بگیرید.</p>
+  </footer>
+</body>
+</html>
